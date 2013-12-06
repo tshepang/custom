@@ -1,0 +1,17 @@
+[ui]
+username = Tshepang Lekhonkhobe <tshepang@gmail.com>
+ssh = ssh -C
+
+[extensions]
+record =
+purge =
+color =
+highlight =
+pager =
+churn =
+convert =
+share =
+histedit =
+
+[pager]
+pager = LESS=$LESS less
