@@ -6,7 +6,6 @@ gnome-terminal --hide-menubar \
 firefox &
 nautilus --no-desktop &
 nm-applet &
-trayer &
 trayer --edge top --align right --widthtype request --distance 18 &
 quodlibet &
 
