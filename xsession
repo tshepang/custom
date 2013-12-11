@@ -1,3 +1,4 @@
+# apps
 gnome-terminal --hide-menubar \
                --tab-with-profile=Default \
                --tab-with-profile=Default \
@@ -8,14 +9,26 @@ nautilus --no-desktop &
 nm-applet &
 trayer --edge top --align right --widthtype request --distance 18 &
 quodlibet &
+if [ $HOSTNAME == 'twork' ]; then
+   icedove &
+fi
 
+# settings
+xset b off
 xmodmap -e "clear Lock"
 xmodmap -e "keycode 66 = Super_L"
 
-synclient TapButton1=1
-synclient ClickFinger2=2
-syndaemon -dti 1
+# host-specific settings
+if [ $HOSTNAME == 'twork' ]; then
+    xrandr --output DVI-0 --mode 1920x1080 --pos 1920x0 --rotate normal \
+           --output VGA-0 --mode 1920x1080 --pos    0x0 --rotate normal
+else
+    synclient TapButton1=1
+    synclient ClickFinger2=2
+    syndaemon -dti 1
+fi
 
+# clock
 while true; do
    xsetroot -name "$( date +"%F %R" )"
    sleep 1m
