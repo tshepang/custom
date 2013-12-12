@@ -4,3 +4,6 @@ name = Tshepang Lekhonkhobe
 
 [color]
 ui = auto
+
+[status]
+showuntrackedfiles = no
