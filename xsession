@@ -20,8 +20,7 @@ xmodmap -e "keycode 66 = Super_L"
 
 # host-specific settings
 if [ $HOSTNAME == 'twork' ]; then
-    xrandr --output DVI-0 --mode 1920x1080 --pos 1920x0 --rotate normal \
-           --output VGA-0 --mode 1920x1080 --pos    0x0 --rotate normal
+    xrandr --output VGA-0 --output DVI-0 --right-of VGA-0
 else
     synclient TapButton1=1
     synclient ClickFinger2=2
