@@ -9,6 +9,7 @@ nautilus --no-desktop &
 nm-applet &
 trayer --edge top --align right --widthtype request --distance 18 &
 quodlibet &
+xfce4-power-manager
 if [ $HOSTNAME == 'twork' ]; then
    icedove &
 fi
