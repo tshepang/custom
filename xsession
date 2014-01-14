@@ -9,7 +9,6 @@ nautilus --no-desktop &
 nm-applet &
 trayer --edge top --align right --widthtype request --distance 18 &
 quodlibet &
-xfce4-power-manager
 if [ $HOSTNAME == 'twork' ]; then
    icedove &
 fi
@@ -30,8 +29,14 @@ fi
 
 # clock
 while true; do
-   xsetroot -name "$( date +"%F %R" )"
-   sleep 1m
+    datetime=$( date +"%F %R" )
+    if acpi -a | grep off-line > /dev/null; then
+        battery=$( python -c "print(\"$(acpi)\".split(',')[1].strip())" )
+        xsetroot -name "$battery"" | ""$datetime"
+    else
+        xsetroot -name "$datetime"
+    fi
+    sleep 1m
 done &
 
 exec dwm
