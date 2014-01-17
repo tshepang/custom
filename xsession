@@ -4,7 +4,7 @@ gnome-terminal --hide-menubar \
                --tab-with-profile=Default \
                --tab-with-profile=Default \
                --tab-with-profile=Default &
-firefox &
+iceweasel &
 nautilus --no-desktop &
 nm-applet &
 trayer --edge top --align right --widthtype request --distance 18 &
