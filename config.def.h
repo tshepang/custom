@@ -22,8 +22,6 @@ static const Rule rules[] = {
   { "trayer",          NULL,     NULL,  1 << 0,    False,       -1 },
   { "Nautilus",        NULL,     NULL,  1 << 1,    False,       -1 },
   { "Gnome-terminal",  NULL,     NULL,  1 << 2,    False,       -1 },
-  { "Liferea",         NULL,     NULL,  1 << 3,    False,       -1 },
-  { "Meld",            NULL,     NULL,  1 << 3,    False,       -1 },
   { "Quodlibet",       NULL,     NULL,  1 << 3,    False,       -1 },
 };
 
