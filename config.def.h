@@ -14,7 +14,7 @@ static const Bool showbar           = True;     /* False means no bar */
 static const Bool topbar            = True;     /* False means bottom bar */
 
 /* tagging */
-static const char *tags[] = { "web", "files", "terminal", "misc", "music" };
+static const char *tags[] = { "web", "files", "terminal", "misc" };
 
 static const Rule rules[] = {
   /* class             instance  title  tags mask  isfloating   monitor */
@@ -24,7 +24,7 @@ static const Rule rules[] = {
   { "Gnome-terminal",  NULL,     NULL,  1 << 2,    False,       -1 },
   { "Liferea",         NULL,     NULL,  1 << 3,    False,       -1 },
   { "Meld",            NULL,     NULL,  1 << 3,    False,       -1 },
-  { "Quodlibet",       NULL,     NULL,  1 << 4,    False,       -1 },
+  { "Quodlibet",       NULL,     NULL,  1 << 3,    False,       -1 },
 };
 
 /* layout(s) */
