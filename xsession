@@ -1,9 +1,7 @@
 # apps
-gnome-terminal --hide-menubar \
-               --tab-with-profile=Default \
-               --tab-with-profile=Default \
-               --tab-with-profile=Default \
-               --tab-with-profile=Default &
+xfce4-terminal --hide-menubar \
+               --tab --tab --tab &
+
 iceweasel &
 nautilus --no-desktop &
 nm-applet &
