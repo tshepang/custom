@@ -1,6 +1,5 @@
 # apps
-xfce4-terminal --hide-menubar \
-               --tab --tab --tab &
+xfce4-terminal --hide-menubar --tab --tab --tab &
 iceweasel &
 nautilus --no-desktop &
 nm-applet &
