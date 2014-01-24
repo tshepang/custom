@@ -21,6 +21,8 @@
  '(major-mode (quote text-mode))
  '(make-backup-files nil)
  '(menu-bar-mode nil)
+ '(tool-bar-mode nil)
+ '(scroll-bar-mode nil)
  '(savehist-mode t)
  '(semantic-mode t)
  '(send-mail-function (quote smtpmail-send-it))
