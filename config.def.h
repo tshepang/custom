@@ -21,7 +21,7 @@ static const Rule rules[] = {
   { "Iceweasel",       NULL,     NULL,  1 << 0,    False,       -1 },
   { "trayer",          NULL,     NULL,  1 << 0,    False,       -1 },
   { "Nautilus",        NULL,     NULL,  1 << 1,    False,       -1 },
-  { "Gnome-terminal",  NULL,     NULL,  1 << 2,    False,       -1 },
+  { "Xfce4-terminal",  NULL,     NULL,  1 << 2,    False,       -1 },
   { "Quodlibet",       NULL,     NULL,  1 << 3,    False,       -1 },
 };
 
@@ -50,7 +50,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[]  = { "gnome-terminal", "--hide-menubar" };
+static const char *termcmd[]  = { "xfce4-terminal", "--hide-menubar" };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
