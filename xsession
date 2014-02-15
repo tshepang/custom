@@ -3,7 +3,7 @@ xfce4-terminal --hide-menubar --tab --tab --tab &
 iceweasel &
 nautilus --no-desktop &
 nm-applet &
-trayer --edge top --align right --widthtype request --distance 18 &
+trayer --edge top --align right --widthtype request --distance 15 &
 quodlibet &
 if [ $HOSTNAME == 'twork' ]; then
    icedove &
