@@ -1,6 +1,6 @@
 # apps
 xfce4-terminal --hide-menubar --tab --tab --tab &
-iceweasel &
+firefox &
 nautilus --no-desktop &
 nm-applet &
 trayer --edge top --align right --widthtype request --distance 15 &
