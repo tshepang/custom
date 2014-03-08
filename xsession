@@ -18,10 +18,7 @@ xmodmap -e "keycode 66 = Super_L"
 if [ $HOSTNAME == 'twork' ]; then
     xrandr --output VGA-0 --output DVI-0 --right-of VGA-0
 else
-    synclient TapButton1=1
-    synclient TapButton2=2
-    synclient TapButton3=3
-    synclient MaxDoubleTapTime=100
+    synclient TapButton1=1 TapButton2=2 TapButton3=3 MaxDoubleTapTime=100
     syndaemon -dti 1
 fi
 
