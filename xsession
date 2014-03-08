@@ -19,7 +19,8 @@ if [ $HOSTNAME == 'twork' ]; then
     xrandr --output VGA-0 --output DVI-0 --right-of VGA-0
 else
     synclient TapButton1=1
-    synclient ClickFinger2=2
+    synclient TapButton2=2
+    synclient TapButton3=3
     syndaemon -dti 1
 fi
 
