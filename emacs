@@ -28,7 +28,7 @@
  '(tab-stop-list (quote (4 8 12 16 20 24 28 32)))
  '(tool-bar-mode nil)
  '(vc-handled-backends nil)
- '(view-read-only nil))
+ '(view-read-only t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
