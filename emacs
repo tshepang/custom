@@ -21,13 +21,14 @@
  '(major-mode (quote text-mode))
  '(make-backup-files nil)
  '(menu-bar-mode nil)
- '(tool-bar-mode nil)
- '(scroll-bar-mode nil)
  '(savehist-mode t)
+ '(scroll-bar-mode nil)
  '(semantic-mode t)
  '(send-mail-function (quote smtpmail-send-it))
  '(tab-stop-list (quote (4 8 12 16 20 24 28 32)))
- '(vc-handled-backends nil))
+ '(tool-bar-mode nil)
+ '(vc-handled-backends nil)
+ '(view-read-only nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
