@@ -5,6 +5,7 @@ nautilus --no-desktop &
 nm-applet &
 trayer --edge top --align right --widthtype request --distance 15 &
 quodlibet &
+liferea &
 if [ $HOSTNAME == 'twork' ]; then
    icedove &
 fi

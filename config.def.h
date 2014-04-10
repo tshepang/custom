@@ -23,6 +23,7 @@ static const Rule rules[] = {
   { "Nautilus",        NULL,     NULL,  1 << 2,    False,       -1 },
   { "Xfce4-terminal",  NULL,     NULL,  1 << 1,    False,       -1 },
   { "Quodlibet",       NULL,     NULL,  1 << 2,    False,       -1 },
+  { "Liferea",         NULL,     NULL,  1 << 2,    False,       -1 },
 };
 
 /* layout(s) */
