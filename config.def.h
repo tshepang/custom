@@ -20,10 +20,10 @@ static const Rule rules[] = {
   /* class             instance  title  tags mask  isfloating   monitor */
   { "Iceweasel",       NULL,     NULL,  1 << 0,    False,       -1 },
   { "trayer",          NULL,     NULL,  1 << 0,    False,       -1 },
-  { "Nautilus",        NULL,     NULL,  1 << 2,    False,       -1 },
   { "Xfce4-terminal",  NULL,     NULL,  1 << 1,    False,       -1 },
   { "Quodlibet",       NULL,     NULL,  1 << 2,    False,       -1 },
   { "Liferea",         NULL,     NULL,  1 << 2,    False,       -1 },
+  { "Nautilus",        NULL,     NULL,  1 << 2,    False,       -1 },
 };
 
 /* layout(s) */
