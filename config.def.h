@@ -24,6 +24,7 @@ static const Rule rules[] = {
   { "Quodlibet",       NULL,     NULL,  1 << 2,    False,       -1 },
   { "Liferea",         NULL,     NULL,  1 << 2,    False,       -1 },
   { "Nautilus",        NULL,     NULL,  1 << 2,    False,       -1 },
+  { "Transmission-gtk",NULL,     NULL,  1 << 2,    False,       -1 },
 };
 
 /* layout(s) */
