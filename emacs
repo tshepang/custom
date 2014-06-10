@@ -21,6 +21,7 @@
  '(menu-bar-mode nil)
  '(savehist-mode t)
  '(scroll-bar-mode nil)
+ '(scroll-conservatively 1)
  '(semantic-mode t)
  '(send-mail-function (quote smtpmail-send-it))
  '(smtpmail-smtp-server "smtp.gmail.com")
