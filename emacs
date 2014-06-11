@@ -27,6 +27,7 @@
  '(smtpmail-smtp-server "smtp.gmail.com")
  '(smtpmail-smtp-service 587)
  '(tab-stop-list (quote (4 8 12 16 20 24 28 32)))
+ '(tab-width 4)
  '(tool-bar-mode nil)
  '(vc-handled-backends nil)
  '(view-read-only t))
