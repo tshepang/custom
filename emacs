@@ -1,6 +1,15 @@
 (add-to-list 'auto-mode-alist '("stack\\(exchange\\|overflow\\)\\.com\\.[a-z0-9]+\\.txt" . fundamental-mode))
-(define-key global-map (kbd "M-p") 'previous-multiframe-window)
-(define-key global-map (kbd "M-n") 'other-window)
+
+(defvar my-keys-map (make-keymap) "my-keys keymap.")
+(define-key my-keys-map (kbd "M-p") 'previous-multiframe-window)
+(define-key my-keys-map (kbd "M-n") 'other-window)
+(define-minor-mode my-keys
+  "A minor mode so that my key settings override annoying major modes."
+  t " my-keys" 'my-keys-map)
+(defun my-minibuffer-setup-hook ()
+  (my-keys nil))
+(add-hook 'minibuffer-setup-hook 'my-minibuffer-setup-hook)
+
 (add-hook 'text-mode-hook 'auto-fill-mode)
 (add-hook 'rst-mode-hook 'linum-mode)
 (add-hook 'prog-mode-hook 'linum-mode)
