@@ -7,7 +7,7 @@
   "A minor mode so that my key settings override annoying major modes."
   t " my-keys" 'my-keys-map)
 (defun my-minibuffer-setup-hook ()
-  (my-keys nil))
+  (my-keys 0))
 (add-hook 'minibuffer-setup-hook 'my-minibuffer-setup-hook)
 
 (add-hook 'text-mode-hook 'auto-fill-mode)
