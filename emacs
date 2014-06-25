@@ -1,5 +1,34 @@
 (add-to-list 'auto-mode-alist '("stack\\(exchange\\|overflow\\)\\.com\\.[a-z0-9]+\\.txt" . fundamental-mode))
 
+;; http://stackoverflow.com/a/19625063/321731
+(defun copy-to-clipboard ()
+  (interactive)
+  (if (display-graphic-p)
+      (progn
+        (message "Yanked region to x-clipboard!")
+        (call-interactively 'clipboard-kill-ring-save)
+        )
+    (if (region-active-p)
+        (progn
+          (shell-command-on-region (region-beginning) (region-end) "xsel -i -b")
+          (message "Yanked region to clipboard!")
+          (deactivate-mark))
+      (message "No region active; can't yank to clipboard!")))
+  )
+(defun paste-from-clipboard ()
+  (interactive)
+  (if (display-graphic-p)
+      (progn
+        (clipboard-yank)
+        (message "graphics active")
+        )
+    (insert (shell-command-to-string "xsel -o -b"))
+    )
+  )
+(global-set-key (kbd "M-w") 'copy-to-clipboard)
+(global-set-key (kbd "C-y") 'paste-from-clipboard)
+
+;; http://stackoverflow.com/a/683575/321731
 (defvar my-keys-map (make-keymap) "my-keys keymap.")
 (define-key my-keys-map (kbd "M-p") 'previous-multiframe-window)
 (define-key my-keys-map (kbd "M-n") 'other-window)
