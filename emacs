@@ -25,8 +25,8 @@
     (insert (shell-command-to-string "xsel -o -b"))
     )
   )
-(global-set-key (kbd "M-w") 'copy-to-clipboard)
-(global-set-key (kbd "C-y") 'paste-from-clipboard)
+(global-set-key [f8] 'copy-to-clipboard)
+(global-set-key [f9] 'paste-from-clipboard)
 
 ;; http://stackoverflow.com/a/683575/321731
 (defvar my-keys-map (make-keymap) "my-keys keymap.")
