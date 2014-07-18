@@ -32,6 +32,7 @@
 (defvar my-keys-map (make-keymap) "my-keys keymap.")
 (define-key my-keys-map (kbd "M-p") 'previous-multiframe-window)
 (define-key my-keys-map (kbd "M-n") 'other-window)
+(define-key my-keys-map (kbd "<f5>") 'revert-buffer-no-confirm)
 (define-minor-mode my-keys
   "A minor mode so that my key settings override annoying major modes."
   t " my-keys" 'my-keys-map)
@@ -39,6 +40,12 @@
   (my-keys 0))
 (add-hook 'minibuffer-setup-hook 'my-minibuffer-setup-hook)
 
+;; http://stackoverflow.com/a/19199071/321731
+(defun revert-buffer-no-confirm ()
+  "Revert buffer without confirmation."
+  (interactive) (revert-buffer t t))
+
+(defalias 'yes-or-no-p 'y-or-n-p)
 (add-hook 'text-mode-hook 'auto-fill-mode)
 (add-hook 'rst-mode-hook 'linum-mode)
 (add-hook 'prog-mode-hook 'linum-mode)
