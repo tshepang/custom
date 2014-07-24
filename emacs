@@ -1,3 +1,7 @@
+(add-to-list 'load-path "/home/tshepang/projects/rust/src/etc/emacs/")
+(autoload 'rust-mode "rust-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
+
 (add-to-list 'auto-mode-alist '("stack\\(exchange\\|overflow\\)\\.com\\.[a-z0-9]+\\.txt" . fundamental-mode))
 
 ;; http://stackoverflow.com/a/19625063/321731
