@@ -49,6 +49,7 @@
 (add-hook 'text-mode-hook 'auto-fill-mode)
 (add-hook 'rst-mode-hook 'linum-mode)
 (add-hook 'prog-mode-hook 'linum-mode)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
