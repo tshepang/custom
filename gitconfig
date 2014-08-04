@@ -7,3 +7,6 @@ ui = auto
 
 [status]
 showuntrackedfiles = no
+
+[gui]
+editor = emacs
