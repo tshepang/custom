@@ -1,5 +1,5 @@
 # apps
-xfce4-terminal --hide-menubar --tab --tab &
+xfce4-terminal --hide-menubar --tab --tab --tab &
 firefox &
 nautilus --no-desktop &
 nm-applet &
