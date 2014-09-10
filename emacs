@@ -63,7 +63,7 @@
  '(column-number-mode t)
  '(custom-enabled-themes (quote (wombat)))
  '(diff-switches "-u")
- '(dired-listing-switches "--format=long --classify --time-style=long-iso")
+ '(dired-listing-switches "--format=long --time-style=long-iso")
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(linum-format "%d ")
