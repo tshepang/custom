@@ -3,6 +3,7 @@ username = Tshepang Lekhonkhobe <tshepang@gmail.com>
 ssh = ssh -C
 
 [extensions]
+rebase =
 record =
 purge =
 color =
