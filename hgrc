@@ -14,4 +14,4 @@ share =
 histedit =
 
 [pager]
-pager = LESS=$LESS less
+pager = pager
