@@ -3,6 +3,7 @@ xfce4-terminal --hide-menubar --tab --tab --tab &
 firefox &
 thunar --no-desktop &
 nm-applet &
+emacs --daemon
 trayer --edge top --align right --widthtype request --distance 15 &
 if [ $HOSTNAME == 'twork' ]; then
    icedove &
