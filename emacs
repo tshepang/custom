@@ -75,6 +75,7 @@
  '(scroll-conservatively 1)
  '(semantic-mode t)
  '(send-mail-function (quote smtpmail-send-it))
+ '(show-paren-mode t)
  '(smtpmail-smtp-server "smtp.gmail.com")
  '(smtpmail-smtp-service 587)
  '(tab-width 4)
