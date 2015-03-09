@@ -66,6 +66,7 @@
  '(dired-listing-switches "--format=long --time-style=long-iso")
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
+ '(large-file-warning-threshold 1000000000)
  '(linum-format "%d ")
  '(major-mode (quote text-mode))
  '(make-backup-files nil)
