@@ -9,6 +9,7 @@ if [ $HOSTNAME == 'twork' ]; then
    icedove &
 else
     quodlibet &
+    sleep 2  # I want liferea to open last so it gets a bigger Window
     liferea &
 fi
 
