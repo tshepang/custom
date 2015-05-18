@@ -1,4 +1,4 @@
-(add-to-list 'load-path "/home/tshepang/rust/src/etc/emacs/")
+(add-to-list 'load-path "/home/tshepang/rust/emacs/")
 (autoload 'rust-mode "rust-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
 
