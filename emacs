@@ -64,6 +64,7 @@
  '(custom-enabled-themes (quote (wombat)))
  '(diff-switches "-u")
  '(dired-listing-switches "--format=long --time-style=long-iso")
+ '(history-delete-duplicates t)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(large-file-warning-threshold 1000000000)
