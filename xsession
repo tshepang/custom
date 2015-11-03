@@ -5,7 +5,7 @@ nautilus --no-desktop &
 nm-applet &
 emacs --daemon
 trayer --edge top --align right --widthtype request --distance 15 &
-if [ $HOSTNAME == 'twork' ]; then
+if [ $HOSTNAME == 'eiq-tshepang' ]; then
    icedove &
 else
     quodlibet &
@@ -19,7 +19,7 @@ xmodmap -e "clear Lock"
 xmodmap -e "keycode 66 = Super_L"
 
 # host-specific settings
-if [ $HOSTNAME == 'twork' ]; then
+if [ $HOSTNAME == 'eiq-tshepang' ]; then
     xrandr --output VGA-0 --output DVI-0 --right-of VGA-0
 else
     synclient TapButton1=1 TapButton2=3 TapButton3=2 MaxDoubleTapTime=100 HorizTwoFingerScroll=1
