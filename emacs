@@ -1,8 +1,6 @@
 (set-face-attribute 'default nil :height 85)
 
-(add-to-list 'load-path "/home/tshepang/rust/emacs/")
-(autoload 'rust-mode "rust-mode" nil t)
-(add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
+(add-to-list 'package-archives '("melpa". "http://melpa.milkbox.net/packages/") t)
 
 (add-to-list 'auto-mode-alist '("stack\\(exchange\\|overflow\\)\\.com\\.[a-z0-9]+\\.txt" . fundamental-mode))
 
