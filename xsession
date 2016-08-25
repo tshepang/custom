@@ -6,7 +6,7 @@ nm-applet &
 emacs --daemon
 trayer --edge top --align right --widthtype request --distance 15 &
 if [ $HOSTNAME == 'eiq-tshepang' ]; then
-   icedove &
+    icedove &
 else
     quodlibet &
     sleep 2  # I want liferea to open last so it gets a bigger Window
@@ -27,7 +27,8 @@ else
 fi
 
 # clock
-while true; do
+while true
+do
     datetime=$( date +"%F %R" )
     if acpi -a | grep off-line > /dev/null; then
         battery=$( python -c "print(\"$(acpi)\".split(',')[1].strip())" )
