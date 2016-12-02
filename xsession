@@ -5,6 +5,7 @@ nautilus --no-desktop &
 nm-applet &
 emacs --daemon
 trayer --edge top --align right --widthtype request --distance 15 &
+xss-lock slock &
 if [ $HOSTNAME == 'eiq-tshepang' ]; then
     icedove &
 else
