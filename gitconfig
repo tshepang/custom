@@ -11,5 +11,5 @@ showuntrackedfiles = no
 [gui]
 editor = emacs
 
-[push]
-default = matching
+[credential]
+helper = store
