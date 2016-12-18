@@ -6,26 +6,17 @@ nm-applet &
 emacs --daemon
 trayer --edge top --align right --widthtype request --distance 15 &
 xss-lock slock &
-if [ $HOSTNAME == 'eiq-tshepang' ]; then
-    icedove &
-else
-    quodlibet &
-    sleep 2  # I want liferea to open last so it gets a bigger Window
-    liferea &
-fi
+quodlibet &
+sleep 2  # I want liferea to open last so it gets a bigger Window
+liferea &
 
 # settings
 xset b off
 xmodmap -e "clear Lock"
 xmodmap -e "keycode 66 = Super_L"
 
-# host-specific settings
-if [ $HOSTNAME == 'eiq-tshepang' ]; then
-    xrandr --output VGA-0 --output DVI-0 --right-of VGA-0
-else
-    synclient TapButton1=1 TapButton2=3 TapButton3=2 MaxDoubleTapTime=100 HorizTwoFingerScroll=1
-    syndaemon -dti 1
-fi
+synclient TapButton1=1 TapButton2=3 TapButton3=2 MaxDoubleTapTime=100 HorizTwoFingerScroll=1
+syndaemon -dti 1
 
 # clock
 while true
