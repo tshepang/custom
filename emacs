@@ -4,6 +4,10 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
 
+(require 'rust-mode)
+(define-key rust-mode-map (kbd "TAB") 'company-indent-or-complete-common)
+(setq company-tooltip-align-annotations t)
+
 (add-to-list 'auto-mode-alist '("stack\\(exchange\\|overflow\\)\\.com\\.[a-z0-9]+\\.txt" . fundamental-mode))
 
 ;; http://stackoverflow.com/a/19625063/321731
@@ -56,6 +60,9 @@
 (add-hook 'rst-mode-hook 'linum-mode)
 (add-hook 'prog-mode-hook 'linum-mode)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+(add-hook 'rust-mode-hook 'racer-mode)
+(add-hook 'racer-mode-hook 'eldoc-mode)
+(add-hook 'racer-mode-hook 'company-mode)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -74,6 +81,9 @@
  '(major-mode (quote text-mode))
  '(make-backup-files nil)
  '(menu-bar-mode nil)
+ '(package-selected-packages
+   (quote
+    (flycheck-rust company racer rust-mode markdown-mode)))
  '(savehist-mode t)
  '(scroll-bar-mode nil)
  '(scroll-conservatively 1)
