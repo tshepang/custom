@@ -6,7 +6,8 @@ nm-applet &
 trayer --edge top --align right --widthtype request --distance 15 &
 xss-lock slock &
 quodlibet &
-sleep 2  # I want liferea to open last so it gets a bigger Window
+sleep 2
+# I want liferea to open last so it gets a bigger Window
 liferea &
 # I place this here to make sure the terminal is fully open first
 RUST_SRC_PATH=~/rust/src emacs --daemon
