@@ -83,7 +83,7 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (flycheck-rust company racer rust-mode markdown-mode)))
+    (toml-mode flycheck cargo flycheck-rust company racer rust-mode markdown-mode)))
  '(savehist-mode t)
  '(scroll-bar-mode nil)
  '(scroll-conservatively 1)
