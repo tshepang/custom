@@ -59,7 +59,6 @@
 (add-hook 'text-mode-hook 'auto-fill-mode)
 (add-hook 'rst-mode-hook 'linum-mode)
 (add-hook 'prog-mode-hook 'linum-mode)
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
 (add-hook 'rust-mode-hook 'racer-mode)
 (add-hook 'racer-mode-hook 'eldoc-mode)
 (add-hook 'racer-mode-hook 'company-mode)
