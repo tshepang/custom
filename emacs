@@ -82,7 +82,7 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (neotree toml-mode flycheck cargo flycheck-rust company racer rust-mode markdown-mode)))
+    (ac-js2 neotree toml-mode flycheck cargo flycheck-rust company racer rust-mode markdown-mode)))
  '(savehist-mode t)
  '(scroll-bar-mode nil)
  '(scroll-conservatively 1)
