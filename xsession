@@ -3,7 +3,7 @@ xfce4-terminal --hide-menubar --tab --tab &
 firefox &
 nautilus --no-desktop &
 nm-applet &
-trayer --edge top --align right --widthtype request --distance 15 &
+trayer --edge top --align right --widthtype request --distance 19 &
 xss-lock slock &
 quodlibet &
 sleep 2
