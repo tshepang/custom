@@ -1,5 +1,6 @@
 # apps
 xfce4-terminal --hide-menubar --tab --tab &
+pulseaudio &
 firefox &
 nautilus --no-desktop &
 nm-applet &
