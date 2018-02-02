@@ -83,7 +83,7 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (ac-js2 toml-mode flycheck cargo flycheck-rust company racer rust-mode markdown-mode)))
+    (flycheck-rust company-racer ac-js2 flycheck cargo company racer rust-mode markdown-mode)))
  '(savehist-mode t)
  '(scroll-bar-mode nil)
  '(scroll-conservatively 1)
