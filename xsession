@@ -1,5 +1,6 @@
 # apps
 xfce4-terminal --hide-menubar --tab --tab &
+cd ~/work/ops-documentation && mdbook serve &
 pulseaudio &
 firefox &
 nautilus --no-desktop &

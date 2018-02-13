@@ -1,5 +1,7 @@
 (set-face-attribute 'default nil :height 85)
 
+(setq-default truncate-lines t)
+
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages"))
 (package-initialize)
@@ -63,6 +65,7 @@
 (add-hook 'rust-mode-hook 'racer-mode)
 (add-hook 'racer-mode-hook 'eldoc-mode)
 (add-hook 'racer-mode-hook 'company-mode)
+(add-hook 'flycheck-mode-hook 'flycheck-rust-setup)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
