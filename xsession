@@ -1,6 +1,6 @@
 # apps
 xfce4-terminal --hide-menubar --tab --tab &
-cd ~/work/ops-documentation && mdbook serve &
+cd ~/work/ops-documentation && mdbook serve --port 4000 --websocket-port 4001 &
 pulseaudio &
 firefox &
 nautilus --no-desktop &
