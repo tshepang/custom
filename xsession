@@ -1,16 +1,17 @@
 # apps
-xfce4-terminal --hide-menubar --tab --tab &
-cd ~/work/ops-documentation && mdbook serve --port 4000 --websocket-port 4001 &
-pulseaudio &
-firefox &
-nautilus --no-desktop &
 nm-applet &
 trayer --edge top --align right --widthtype request --distance 19 &
+xfce4-terminal --hide-menubar --tab --tab &
+cd ~/hotrod/docs/ops && mdbook serve --port 4000 --websocket-port 4001 &
+pulseaudio &
+nautilus --no-desktop &
 xss-lock slock &
 quodlibet &
-sleep 2
-# I want liferea to open last so it gets a bigger Window
+# I want liferea to open last (on its workspace) so it gets a bigger Window
 liferea &
+# I want firefox open last so that network connectivity finishes
+sleep 2
+firefox &
 
 # settings
 xset b off
