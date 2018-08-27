@@ -1,4 +1,5 @@
 # apps
+firefox &
 nm-applet &
 trayer --edge top --align right --widthtype request --distance 19 &
 xfce4-terminal --hide-menubar --tab --tab &
@@ -9,9 +10,6 @@ xss-lock slock &
 quodlibet &
 # I want liferea to open last (on its workspace) so it gets a bigger Window
 liferea &
-# I want firefox open last so that network connectivity finishes
-sleep 2
-firefox &
 
 # settings
 xset b off
