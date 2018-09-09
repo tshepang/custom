@@ -83,6 +83,7 @@
  '(linum-format "%d ")
  '(major-mode (quote text-mode))
  '(make-backup-files nil)
+ '(create-lockfiles nil)
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
