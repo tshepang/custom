@@ -15,6 +15,3 @@ churn =
 convert =
 share =
 histedit =
-
-[pager]
-pager = pager
