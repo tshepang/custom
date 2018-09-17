@@ -75,7 +75,7 @@
  '(column-number-mode t)
  '(custom-enabled-themes (quote (wombat)))
  '(diff-switches "-u")
- '(dired-listing-switches "--human --format=long --time-style=long-iso")
+ '(dired-listing-switches "--human --group-directories-first --format=long --no-group --time-style=long-iso")
  '(history-delete-duplicates t)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
