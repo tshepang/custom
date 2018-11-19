@@ -6,7 +6,7 @@ name = Tshepang Lekhonkhobe
 ui = auto
 
 [gui]
-editor = emacs
+editor = emacsclient --tty
 
 [filter "lfs"]
 smudge = git-lfs smudge -- %f
