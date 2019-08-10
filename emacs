@@ -97,7 +97,6 @@
  '(smtpmail-smtp-server "smtp.gmail.com")
  '(smtpmail-smtp-service 587)
  '(tab-width 4)
- '(tool-bar-mode nil)
  '(undo-limit 800000)
  '(vc-handled-backends nil)
  '(view-read-only t))
