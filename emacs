@@ -1,5 +1,3 @@
-(set-face-attribute 'default nil :height 85)
-
 (setq-default truncate-lines t)
 
 (require 'package)
