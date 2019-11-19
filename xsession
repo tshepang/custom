@@ -3,7 +3,6 @@ firefox &
 nm-applet &
 trayer --edge top --align right --widthtype request --distance 19 &
 xfce4-terminal --hide-menubar --tab --tab &
-pulseaudio &
 nautilus &
 xss-lock slock &
 quodlibet &
