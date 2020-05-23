@@ -1,3 +1,6 @@
+(if (and (version< emacs-version "26.3") (>= libgnutls-version 30600))
+    (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3"))
+
 (setq-default truncate-lines t)
 
 (require 'package)
