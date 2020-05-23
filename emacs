@@ -1,7 +1,7 @@
 (setq-default truncate-lines t)
 
 (require 'package)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages"))
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
 
 (require 'rust-mode)
