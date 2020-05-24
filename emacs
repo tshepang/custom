@@ -92,7 +92,7 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (flycheck-rust ac-js2 flycheck company-lsp lsp-ui helm-lsp lsp-treemacs lsp-mode markdown-mode+)))
+    (yasnippet flycheck-rust ac-js2 flycheck company-lsp lsp-ui helm-lsp lsp-treemacs lsp-mode markdown-mode+)))
  '(rust-format-on-save t)
  '(savehist-mode t)
  '(scroll-bar-mode nil)
