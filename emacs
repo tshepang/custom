@@ -7,9 +7,12 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
 
+'(rust-always-locate-project-on-open t)
 (require 'rust-mode)
 (define-key rust-mode-map (kbd "TAB") 'company-indent-or-complete-common)
 (setq company-tooltip-align-annotations t)
+(require 'lsp-mode)
+(require 'lsp-clients)
 
 (add-to-list 'auto-mode-alist '("stack\\(exchange\\|overflow\\)\\.com\\.[a-z0-9]+\\.txt" . fundamental-mode))
 
@@ -63,8 +66,7 @@
 (add-hook 'rst-mode-hook 'linum-mode)
 (add-hook 'prog-mode-hook 'linum-mode)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
-(add-hook 'rust-mode-hook 'racer-mode)
-(add-hook 'racer-mode-hook 'eldoc-mode)
+(add-hook 'rust-mode-hook #'lsp)
 (add-hook 'racer-mode-hook 'company-mode)
 (add-hook 'flycheck-mode-hook 'flycheck-rust-setup)
 (custom-set-variables
@@ -74,21 +76,24 @@
  ;; If there is more than one, they won't work right.
  '(auto-save-default nil)
  '(column-number-mode t)
+ '(create-lockfiles nil)
  '(custom-enabled-themes (quote (wombat)))
  '(diff-switches "-u")
- '(dired-listing-switches "--human --group-directories-first --format=long --no-group --time-style=long-iso")
+ '(dired-listing-switches
+   "--human --group-directories-first --format=long --no-group --time-style=long-iso")
  '(history-delete-duplicates t)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(large-file-warning-threshold 1000000000)
  '(linum-format "%d ")
+ '(lsp-rust-server (quote rls))
  '(major-mode (quote text-mode))
  '(make-backup-files nil)
- '(create-lockfiles nil)
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (flycheck-rust company-racer ac-js2 flycheck cargo company racer rust-mode markdown-mode)))
+    (flycheck-rust ac-js2 flycheck company-lsp lsp-ui helm-lsp lsp-treemacs lsp-mode markdown-mode+)))
+ '(rust-format-on-save t)
  '(savehist-mode t)
  '(scroll-bar-mode nil)
  '(scroll-conservatively 1)
