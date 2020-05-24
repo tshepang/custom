@@ -86,7 +86,7 @@
  '(inhibit-startup-screen t)
  '(large-file-warning-threshold 1000000000)
  '(linum-format "%d ")
- '(lsp-rust-server (quote rls))
+ '(lsp-rust-server (quote rust-analyzer))
  '(major-mode (quote text-mode))
  '(make-backup-files nil)
  '(menu-bar-mode nil)
