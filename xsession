@@ -29,7 +29,4 @@ do
     sleep 5s
 done &
 
-# for CLion
-wmname LG3D
-
 exec dwm
