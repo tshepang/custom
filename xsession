@@ -17,7 +17,7 @@ syndaemon -dti 1
 
 ~/blog && zola serve &
 mdbook serve $HOTROD_PATH/docs/dev --port 5000 --websocket-port 5001 &
-mdbook serve $HOTROD_PATH/docs/ops --port 6000 --websocket-port 6001 &
+mdbook serve $HOTROD_PATH/docs/ops --port 9000 --websocket-port 9001 &
 mdbook serve ~/rust/rustc/src/tools/cargo/src/doc --port 7000 --websocket-port 7001 &
 $HOTROD_PATH/src/web/site && zola serve --port 8000 &
 
