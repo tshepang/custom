@@ -26,7 +26,8 @@ while true
 do
     datetime=$( date +"%F %R" )
     load_5m=$( cat /proc/loadavg | { read first _; echo $first; } )
-    if acpi -a | grep off-line > /dev/null; then
+    if acpi -a | grep off-line > /dev/null
+    then
         battery=$( python -c "print(\"$(acpi)\".split(',')[1].strip())" )
         xsetroot -name "$battery"" | ""$load_5m"" | ""$datetime"
     else
