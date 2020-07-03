@@ -16,3 +16,6 @@ clean = git-lfs clean -- %f
 
 [log]
 mailmap = false
+
+[pull]
+rebase = true
