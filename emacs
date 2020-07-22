@@ -82,6 +82,7 @@
  '(dired-listing-switches
    "--human --group-directories-first --format=long --no-group --time-style=long-iso")
  '(history-delete-duplicates t)
+ '(history-length 1000)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(large-file-warning-threshold 1000000000)
