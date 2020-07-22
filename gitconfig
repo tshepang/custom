@@ -5,7 +5,7 @@ name = Tshepang Lekhonkhobe
 [color]
 ui = auto
 
-[gui]
+[core]
 editor = emacsclient --tty
 
 [filter "lfs"]
