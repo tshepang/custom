@@ -61,12 +61,18 @@
   "Revert buffer without confirmation."
   (interactive) (revert-buffer t t))
 
+(defun lsp-go-install-save-hooks ()
+  (add-hook 'before-save-hook #'lsp-format-buffer t t)
+  (add-hook 'before-save-hook #'lsp-organize-imports t t))
+(add-hook 'go-mode-hook #'lsp-go-install-save-hooks)
+
 (defalias 'yes-or-no-p 'y-or-n-p)
 (add-hook 'text-mode-hook 'auto-fill-mode)
 (add-hook 'yaml-mode-hook 'linum-mode)
 (add-hook 'prog-mode-hook 'linum-mode)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (add-hook 'rust-mode-hook #'lsp)
+(add-hook 'go-mode-hook #'lsp-deferred)
 (add-hook 'racer-mode-hook 'company-mode)
 (add-hook 'flycheck-mode-hook 'flycheck-rust-setup)
 (custom-set-variables
@@ -93,7 +99,7 @@
  '(make-backup-files nil)
  '(menu-bar-mode nil)
  '(package-selected-packages
-   '(restclient yasnippet flycheck-rust ac-js2 flycheck company-lsp lsp-ui helm-lsp lsp-treemacs lsp-mode markdown-mode+))
+   '(go-mode restclient yasnippet flycheck-rust ac-js2 flycheck company-lsp lsp-ui helm-lsp lsp-treemacs lsp-mode markdown-mode+))
  '(rust-format-on-save t)
  '(savehist-mode t)
  '(scroll-bar-mode nil)
