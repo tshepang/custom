@@ -8,14 +8,8 @@ ui = auto
 [core]
 editor = emacsclient --tty
 
-[filter "lfs"]
-smudge = git-lfs smudge -- %f
-process = git-lfs filter-process
-required = true
-clean = git-lfs clean -- %f
+[url "bitbucket:"]
+insteadOf = https://bitbucket.org/
 
-[log]
-mailmap = false
-
-[pull]
-rebase = true
+[init]
+defaultBranch = main
