@@ -99,7 +99,7 @@
  '(make-backup-files nil)
  '(menu-bar-mode nil)
  '(package-selected-packages
-   '(go-mode restclient yasnippet flycheck-rust ac-js2 flycheck company-lsp lsp-ui helm-lsp lsp-treemacs lsp-mode markdown-mode+))
+   '(go-mode yasnippet flycheck-rust ac-js2 flycheck company-lsp lsp-ui helm-lsp lsp-treemacs lsp-mode markdown-mode+))
  '(rust-format-on-save t)
  '(savehist-mode t)
  '(scroll-bar-mode nil)
