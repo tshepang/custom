@@ -1,7 +1,10 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const char font[]            = "-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*";
+static const char *fonts[] = {
+	"monospace:size=10"
+};
+static const char dmenufont[]       = "monospace:size=10";
 static const char normbordercolor[] = "#444444";
 static const char normbgcolor[]     = "#222222";
 static const char normfgcolor[]     = "#bbbbbb";
@@ -10,27 +13,30 @@ static const char selbgcolor[]      = "#005577";
 static const char selfgcolor[]      = "#eeeeee";
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
-static const Bool showbar           = True;     /* False means no bar */
-static const Bool topbar            = True;     /* False means bottom bar */
+static const int showbar            = 1;        /* 0 means no bar */
+static const int topbar             = 1;        /* 0 means bottom bar */
 
 /* tagging */
 static const char *tags[] = { "web", "terminal", "misc" };
 
 static const Rule rules[] = {
-  /* class             instance  title  tags mask  isfloating   monitor */
-  { "Iceweasel",       NULL,     NULL,  1 << 0,    False,       -1 },
-  { "trayer",          NULL,     NULL,  1 << 0,    False,       -1 },
-  { "Xfce4-terminal",  NULL,     NULL,  1 << 1,    False,       -1 },
-  { "Quodlibet",       NULL,     NULL,  1 << 2,    False,       -1 },
-  { "Liferea",         NULL,     NULL,  1 << 2,    False,       -1 },
-  { "Nautilus",        NULL,     NULL,  1 << 2,    False,       -1 },
-  { "Transmission-gtk",NULL,     NULL,  1 << 2,    False,       -1 },
+	/* xprop(1):
+	 *	WM_CLASS(STRING) = instance, class
+	 *	WM_NAME(STRING) = title
+	 */
+	/* class            instance    title       tags mask     isfloating   monitor */
+	{ "Firefox",        NULL,       NULL,       1 << 0,       0,           -1 },
+	{ "Nightly",        NULL,       NULL,       1 << 0,       0,           -1 },
+	{ "trayer",         NULL,       NULL,       1 << 0,       0,           -1 },
+	{ "Xfce4-terminal", NULL,       NULL,       1 << 1,       0,           -1 },
+	{ "Nautilus",       NULL,       NULL,       1 << 2,       0,           -1 },
+	{ "Quodlibet",      NULL,       NULL,       1 << 2,       0,           -1 },
 };
 
 /* layout(s) */
-static const float mfact      = 0.55; /* factor of master area size [0.05..0.95] */
-static const int nmaster      = 1;    /* number of clients in master area */
-static const Bool resizehints = True; /* True means respect size hints in tiled resizals */
+static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
+static const int nmaster     = 1;    /* number of clients in master area */
+static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
@@ -51,7 +57,8 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
+static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]  = { "xfce4-terminal", "--hide-menubar" };
 
 static Key keys[] = {
