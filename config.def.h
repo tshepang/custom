@@ -26,7 +26,6 @@ static const Rule rules[] = {
 	 */
 	/* class            instance    title       tags mask     isfloating   monitor */
 	{ "Firefox",        NULL,       NULL,       1 << 0,       0,           -1 },
-	{ "Nightly",        NULL,       NULL,       1 << 0,       0,           -1 },
 	{ "trayer",         NULL,       NULL,       1 << 0,       0,           -1 },
 	{ "Xfce4-terminal", NULL,       NULL,       1 << 1,       0,           -1 },
 	{ "Nautilus",       NULL,       NULL,       1 << 2,       0,           -1 },
