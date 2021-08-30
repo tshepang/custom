@@ -18,10 +18,10 @@ syndaemon -dti 1
 while true
 do
     datetime=$( date +"%F %R" )
-    load_5m=$( cat /proc/loadavg | { read first _; echo $first; } )
+    load_5m=$( cat /proc/loadavg | awk '{print $1}' )
     if acpi -a | grep off-line > /dev/null
     then
-        battery=$( python3 -c "print(\"$(acpi)\".split(',')[1].strip())" )
+        battery=$( acpi | awk '{print $4}' | sed 's/,//' )
         xsetroot -name "$battery"" | ""$load_5m"" | ""$datetime"
     else
         xsetroot -name "$load_5m"" | ""$datetime"
