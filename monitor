@@ -1,0 +1,13 @@
+#!/usr/bin/fish
+
+while true
+      set datetime ( date +"%F %R" )
+      set load_5m ( cat /proc/loadavg | awk '{print $1}' )
+      if acpi -a | grep off-line > /dev/null
+         set battery ( acpi | awk '{print $4}' | sed 's/,//' )
+         xsetroot -name "$battery"" | ""$load_5m"" | ""$datetime"
+      else
+          xsetroot -name "$load_5m"" | ""$datetime"
+      end
+      sleep 5s
+end

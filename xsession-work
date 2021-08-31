@@ -2,10 +2,11 @@
 firefox &
 nm-applet &
 trayer --edge top --align right --widthtype request --distance 19 &
-gnome-terminal --hide-menubar --tab --tab --tab &
-nautilus &
+alacritty &
+alacritty --class Monitoring &
 xss-lock slock &
-quodlibet &
+emacs --daemon || true
+emacsclient --create-frame &
 
 # settings
 xset b off
@@ -14,17 +15,7 @@ xmodmap -e "keycode 66 = Super_L"
 synclient TapButton1=1 TapButton2=0 TapButton3=2 MaxDoubleTapTime=100 HorizTwoFingerScroll=1
 syndaemon -dti 1
 
-dwm &
-
 # battery, loadavg, and clock
-while true
-    set datetime ( date +"%F %R" )
-    set load_5m ( cat /proc/loadavg | awk '{print $1}' )
-    if acpi -a | grep off-line > /dev/null
-        set battery ( acpi | awk '{print $4}' | sed 's/,//' )
-        xsetroot -name "$battery"" | ""$load_5m"" | ""$datetime"
-    else
-        xsetroot -name "$load_5m"" | ""$datetime"
-    end
-    sleep 5s
-end
+monitor &
+
+exec dwm

@@ -17,7 +17,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 
 /* tagging */
-static const char *tags[] = { "web", "terminal", "misc" };
+static const char *tags[] = { "web", "emacs", "terminal", "monitoring" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -27,9 +27,11 @@ static const Rule rules[] = {
 	/* class            instance    title       tags mask     isfloating   monitor */
 	{ "Firefox",        NULL,       NULL,       1 << 0,       0,           -1 },
 	{ "trayer",         NULL,       NULL,       1 << 0,       0,           -1 },
-	{ "Xfce4-terminal", NULL,       NULL,       1 << 1,       0,           -1 },
-	{ "Gnome-terminal", NULL,       NULL,       1 << 1,       0,           -1 },
-	{ "Nautilus",       NULL,       NULL,       1 << 2,       0,           -1 },
+	{ "Emacs",          NULL,       NULL,       1 << 1,       0,           -1 },
+	{ "Xfce4-terminal", NULL,       NULL,       1 << 2,       0,           -1 },
+	{ "Gnome-terminal", NULL,       NULL,       1 << 2,       0,           -1 },
+	{ NULL,      "Alacritty",       NULL,       1 << 2,       0,           -1 },
+	{ NULL,     "Monitoring",       NULL,       1 << 3,       0,           -1 },
 };
 
 /* layout(s) */
