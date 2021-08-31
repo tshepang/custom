@@ -98,6 +98,7 @@
  '(major-mode 'text-mode)
  '(make-backup-files nil)
  '(menu-bar-mode nil)
+ '(tool-bar-mode nil)
  '(package-selected-packages
    '(go-mode yasnippet flycheck-rust flycheck company-lsp lsp-ui helm-lsp lsp-treemacs lsp-mode markdown-mode+))
  '(rust-format-on-save t)
