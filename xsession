@@ -2,8 +2,10 @@
 firefox &
 nm-applet &
 trayer --edge top --align right --widthtype request --distance 19 &
-xfce4-terminal --hide-menubar --tab --tab &
-nautilus &
+alacritty --option font.size=5 &
+alacritty --option font.size=5 --class Monitoring &
+emacs --daemon || true
+emacsclient --create-frame &
 xss-lock slock &
 quodlibet &
 
