@@ -2,8 +2,8 @@
 firefox &
 nm-applet &
 trayer --edge top --align right --widthtype request --distance 19 &
-alacritty --option font.size=5 &
-alacritty --option font.size=5 --class Monitoring &
+alacritty --option font.size=6 &
+alacritty --option font.size=6 --class Monitoring &
 emacs --daemon || true
 emacsclient --create-frame &
 xss-lock slock &
