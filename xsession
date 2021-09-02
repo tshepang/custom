@@ -7,7 +7,6 @@ alacritty --option font.size=5 --class Monitoring &
 emacs --daemon || true
 emacsclient --create-frame &
 xss-lock slock &
-quodlibet &
 
 # settings
 xset b off
