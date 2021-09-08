@@ -1,11 +1,4 @@
-(if (and (version< emacs-version "26.3") (>= libgnutls-version 30600))
-    (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3"))
-
 (setq-default truncate-lines t)
-
-(require 'package)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
-(package-initialize)
 
 '(rust-always-locate-project-on-open t)
 (require 'rust-mode)
@@ -13,8 +6,6 @@
 (setq company-tooltip-align-annotations t)
 (require 'lsp-mode)
 (require 'lsp-clients)
-
-(add-to-list 'auto-mode-alist '("stack\\(exchange\\|overflow\\)\\.com\\.[a-z0-9]+\\.txt" . fundamental-mode))
 
 ;; http://stackoverflow.com/a/19625063/321731
 (defun copy-to-clipboard ()
