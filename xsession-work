@@ -1,12 +1,12 @@
 # apps
+emacs --daemon || true
 firefox &
 nm-applet &
 trayer --edge top --align right --widthtype request --distance 19 &
 alacritty --option font.size=6 &
+alacritty --option font.size=6 --class Emacs --command emacsclient --tty &
 alacritty --option font.size=6 --class Monitoring &
 xss-lock slock &
-emacs --daemon || true
-emacsclient --create-frame &
 
 # settings
 xset b off
