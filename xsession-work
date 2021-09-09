@@ -3,9 +3,9 @@ emacs --daemon || true
 firefox &
 nm-applet &
 trayer --edge top --align right --widthtype request --distance 19 &
-alacritty --option font.size=6 &
-alacritty --option font.size=6 --class Emacs --command emacsclient --tty &
-alacritty --option font.size=6 --class Monitoring &
+alacritty --option font.size=6                    --command tmux &
+alacritty --option font.size=6 --class Emacs      --command emacsclient --tty &
+alacritty --option font.size=6 --class Monitoring --command tmux &
 xss-lock slock &
 
 # settings
