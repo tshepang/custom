@@ -59,6 +59,7 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 (add-hook 'text-mode-hook 'auto-fill-mode)
+(add-hook 'markdown-mode-hook 'linum-mode)
 (add-hook 'yaml-mode-hook 'linum-mode)
 (add-hook 'prog-mode-hook 'linum-mode)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
