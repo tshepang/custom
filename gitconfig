@@ -8,8 +8,8 @@ ui = auto
 [core]
 editor = emacsclient --tty
 
-[url "bitbucket:"]
-insteadOf = https://bitbucket.org/
-
 [init]
 defaultBranch = main
+
+[includeIf "gitdir:~/work/"]
+path = ~/.gitconfig-work

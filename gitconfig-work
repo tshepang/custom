@@ -1,0 +1,7 @@
+[user]
+name = Tshepang Lekhonkhobe
+email = tshepang.lekhonkhobe@snode.com
+
+[core]
+editor = emacsclient --tty
+sshCommand = "ssh -i ~/.ssh/id_ed25519-github"
