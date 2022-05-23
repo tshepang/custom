@@ -13,3 +13,6 @@ defaultBranch = main
 
 [includeIf "gitdir:~/work/"]
 path = ~/.gitconfig-work
+
+[url "bitbucket:"]
+insteadOf = https://bitbucket.org/
