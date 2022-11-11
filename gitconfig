@@ -16,3 +16,15 @@ path = ~/.gitconfig-work
 
 [url "bitbucket:"]
 insteadOf = https://bitbucket.org/
+
+[diff]
+tool = difftastic
+
+[difftool]
+prompt = false
+
+[difftool "difftastic"]
+cmd = difft "$LOCAL" "$REMOTE"
+
+[pager]
+difftool = true
