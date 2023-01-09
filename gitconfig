@@ -11,12 +11,6 @@ editor = hx
 [init]
 defaultBranch = main
 
-[includeIf "gitdir:~/work/"]
-path = ~/.gitconfig-work
-
-[url "bitbucket:"]
-insteadOf = https://bitbucket.org/
-
 [diff]
 tool = difftastic
 
