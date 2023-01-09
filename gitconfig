@@ -6,7 +6,7 @@ name = Tshepang Mbambo
 ui = auto
 
 [core]
-editor = emacsclient --tty
+editor = hx
 
 [init]
 defaultBranch = main
