@@ -1,5 +1,4 @@
 # apps
-emacs --daemon || true
 nm-applet &
 xss-lock slock &
 
