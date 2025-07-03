@@ -22,3 +22,7 @@ cmd = difft "$LOCAL" "$REMOTE"
 
 [pager]
 difftool = true
+
+# for rdg push
+[url "git@github.com:"]
+insteadOf = "https://github.com/"
