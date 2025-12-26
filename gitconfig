@@ -2,27 +2,9 @@
 email = hopsi@tuta.io
 name = Tshepang Mbambo
 
-[color]
-ui = auto
-
-[core]
-editor = hx
-
-[init]
-defaultBranch = main
-
 [diff]
-tool = difftastic
-
-[difftool]
-prompt = false
-
-[difftool "difftastic"]
-cmd = difft "$LOCAL" "$REMOTE"
-
-[pager]
-difftool = true
+external = difft
 
 # for rdg push
-[url "git@github.com:"]
-insteadOf = "https://github.com/"
+[url "git@github.com:tshepang/rust"]
+insteadOf = "https://github.com/tshepang/rust"
